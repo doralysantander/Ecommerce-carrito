@@ -22,18 +22,22 @@ function App() {
       <Route path="/productos" element={<Category/>}/>
       {/*<Route path="/carrito" element={<Cart/>}/>*/}
       <Route path="/lista-productos" element={<Products/>}/>
-      <Route path="*" element={<div>404 Not Found!</div>}/>
+     
     
     </Routes>
+  
     <CartProvider>
     <Products/>
     <Cart/>
     </CartProvider>
     <Footer/>
     </BrowserRouter>
-
-
+    
+   
+  
+ 
     </>
+    
   );
 }
 export default App;

@@ -19,9 +19,7 @@ export const CartProvider = ({ children }) => {
 
   /* Cada vez que se actualize el carrito seteamos el local storage para guardar los productos */
   useEffect(() => {
-   
     localStorage.setItem("cartProducts", JSON.stringify(cartItems));
-    console.log(cartItems)
   }, [cartItems]);
 
   /* Creamos la funcion para agregar productos al carrito */
@@ -38,7 +36,7 @@ export const CartProvider = ({ children }) => {
         cartItems.map((productInCart) => {
           if (productInCart.id === product.id) {
             return { ...inCart, amount: inCart.amount + 1 };
-          } else return productInCart;//retotna productos que hay carro
+          } else return productInCart;
         })
       );
       /* Si el producto no se encuentra al carrito, lo agregamos y dejamos en uno la cantidad */
@@ -56,7 +54,6 @@ export const CartProvider = ({ children }) => {
 
     /* Si la cantidad del producto es igual a 1, filtramos el carrito y lo sacamos */
     if (inCart.amount === 1) {
-        //setea el estado del carro
       setCartItems(
         cartItems.filter((productInCart) => productInCart.id !== productId)
       );
@@ -72,6 +69,7 @@ export const CartProvider = ({ children }) => {
       );
     }
   };
+
   return (
     /* Envolvemos el children con el provider y le pasamos un objeto con las propiedades que necesitamos por value */
     <CartContext.Provider
@@ -83,4 +81,3 @@ export const CartProvider = ({ children }) => {
 };
 
 export default CartContext;
-

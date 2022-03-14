@@ -17,10 +17,11 @@ const Landing = () => {
             <Carrusel/>
             <About />
             <Category/> 
-             <CartProvider>
-               <Products/>
-                <Cart/>
-             </CartProvider>
+            <CartProvider>
+              <Products/>
+             <Cart/>
+            </CartProvider>
+            
 
     </>
   )

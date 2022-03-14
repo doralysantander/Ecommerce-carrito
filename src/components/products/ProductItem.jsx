@@ -1,8 +1,8 @@
 import React from 'react'
 //recibe la data y el producto para agregarse
-const ProductItem = ({data,addToCart}) => {
+const ProductItem = ({Data,addToCart}) => {
   //desestructurar
-  let {id, description,price,image }= data;
+  let {id, description,price,image }= Data;
 //console.log({data})
   return (
     <div className="border flex flex-col justify-center items-center border-lime-800">
