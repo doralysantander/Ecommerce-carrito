@@ -8,8 +8,9 @@ const Products = () => {
 
 /* Traemos del context la funcion para agregar un producto */
 const { AddItemToCart } = useContext(CartContext);
+
 return (// aqui puedo colocar justyfy-items:center justify-content:center
-<div div className="w-full h-5/6 gap-4 grid justify-items-center justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg">
+<div  id="products" className="w-full h-5/6 gap-4 grid justify-items-center justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg">
 {ProductsData.map((product,i)=>(
 <div key={i} className=" w-full border flex flex-col justify-center items-center border-lime-800">
 

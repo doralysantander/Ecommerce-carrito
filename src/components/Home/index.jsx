@@ -10,7 +10,6 @@ const Home = () => {
     <div>
           
          <Carrusel/>
-         <Cart />
         <About />  
         <Category/>
         <Products/>

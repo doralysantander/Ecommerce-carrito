@@ -9,7 +9,7 @@ const Cart = () => {
   const [productsLength, setProductsLength] = useState(0);
 
   /* Traemos del context los productos del carrito */
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, sendMessage } = useContext(CartContext);
 
   /* Cada vez que se modifica el carrito, actualizamos la cantidad de productos */
   useEffect(() => {
@@ -23,7 +23,7 @@ const Cart = () => {
     (previous, current) => previous + current.amount * current.price,
     0
   );
-
+ 
   return (
     <div className="w-full h-full flex items-start justify-end ">
       <div
@@ -87,6 +87,7 @@ const Cart = () => {
               ))}
             </div>
           )}
+          <button onClick={sendMessage}>Contactame</button>
 
           <h2 className="text-center font-medium mt-14 pb-34">Total: ${total}</h2>
         </div>

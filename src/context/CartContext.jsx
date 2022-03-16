@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  
+
   /* Creamos un estado para el carrito */
   const [cartItems, setCartItems] = useState(() => {
     try {
@@ -17,6 +17,7 @@ export const CartProvider = ({ children }) => {
       return [];
     }
   });
+
 
   /* Cada vez que se actualize el carrito seteamos el local storage para guardar los productos */
   useEffect(() => {
@@ -71,13 +72,26 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const sendMessage = () => { 
+    let msg = []; 
+    let priceTotal = 0;
+    for (let item of cartItems) { 
+      priceTotal += item.price * item.amount;
+      let textopedido = item.description + " x" + item.amount + " precio c/u: " + item.price +  "%0A"; 
+      msg += textopedido; 
+    } 
+    window.open(`https://api.whatsapp.com/send?phone=573173244337&text=Hola Abel, me interesan estos productos:%0A${msg} precioTotal: ${priceTotal}`
+    
+    ); 
+  };
+
   /*Crear una funcion para eliminar todos los productos del carrito */
 
-  
+
   return (
     /* Envolvemos el children con el provider y le pasamos un objeto con las propiedades que necesitamos por value */
     <CartContext.Provider
-      value={{ cartItems, AddItemToCart, DeleteItemToCart }} //estado del carro y 
+      value={{ cartItems, AddItemToCart, DeleteItemToCart,sendMessage }} //estado del carro y 
     >
       {children}
     </CartContext.Provider>
