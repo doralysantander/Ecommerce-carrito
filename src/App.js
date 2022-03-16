@@ -10,26 +10,24 @@ import Landing from './pages/Landing';
 import Cart from './components/Cart/Cart';
 import {CartProvider} from './context/CartContext'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './components/Home'
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <Navbar/>
+    <CartProvider>
+    <Home />
+    </CartProvider>
     <Routes>
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
       <Route path="/productos" element={<Category/>}/>
-      {/*<Route path="/carrito" element={<Cart/>}/>*/}
       <Route path="/lista-productos" element={<Products/>}/>
      
     
     </Routes>
-  
-    <CartProvider>
-    <Products/>
-    <Cart/>
-    </CartProvider>
     <Footer/>
     </BrowserRouter>
     

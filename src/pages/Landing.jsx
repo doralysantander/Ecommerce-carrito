@@ -18,7 +18,6 @@ const Landing = () => {
             <About />
             <Category/> 
             <CartProvider>
-              <Products/>
              <Cart/>
             </CartProvider>
             

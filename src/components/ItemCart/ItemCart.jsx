@@ -24,6 +24,7 @@ export const ItemCart = ({ item }) => {
       <div className =" flex gap-4">
         <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={() => AddItemToCart(item)}>Agregar</button>
         <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={() => DeleteItemToCart(id)}>Eliminar</button>
+        <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold">Eliminar carrito </button>
       </div>
     </div>
     </div>

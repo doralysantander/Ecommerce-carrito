@@ -4,6 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+  
   /* Creamos un estado para el carrito */
   const [cartItems, setCartItems] = useState(() => {
     try {
@@ -70,10 +71,13 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  /*Crear una funcion para eliminar todos los productos del carrito */
+
+  
   return (
     /* Envolvemos el children con el provider y le pasamos un objeto con las propiedades que necesitamos por value */
     <CartContext.Provider
-      value={{ cartItems, AddItemToCart, DeleteItemToCart }}
+      value={{ cartItems, AddItemToCart, DeleteItemToCart }} //estado del carro y 
     >
       {children}
     </CartContext.Provider>
