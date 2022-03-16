@@ -38,7 +38,7 @@ className="h-14 w-14 sm:h-20 w-20 md:h-24 w-24 lg:h-28 w-28 xl:w-28"
 }
 function slideMenu() {
     return (
-      <div className="bg-green-900 px-10 py-10 h-screen absolute w-3/6 top-22 sm:top-32  xl:w-1/6  left-0 top-28 ">
+      <div className="bg-green-900 px-10 py-8 h-screen absolute w-3/6 top-20 sm:top-32  xl:w-1/6  left-0 top-24 ">
         <ul className="flex flex-col gap-8">
           <li className="menu-list-item py-2 text-sm text-slate-100"><NavLink to="/">Inicio</NavLink></li>
           <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Quienes somos</NavLink></li>

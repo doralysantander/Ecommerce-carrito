@@ -25,8 +25,6 @@ function App() {
       <Route path="/carrusel" element={<Carrusel/>}/>
       <Route path="/productos" element={<Category/>}/>
       <Route path="/lista-productos" element={<Products/>}/>
-     
-    
     </Routes>
     <Footer/>
     </BrowserRouter>

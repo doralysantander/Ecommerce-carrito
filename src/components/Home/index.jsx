@@ -8,11 +8,11 @@ import Category from '../products/Category'
 const Home = () => {
   return (
     <div>
-        
+          
          <Carrusel/>
-        <About />
+         <Cart />
+        <About />  
         <Category/>
-        <Cart />
         <Products/>
     </div>
   )
