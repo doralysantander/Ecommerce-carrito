@@ -40,10 +40,10 @@ function slideMenu() {
     return (
       <div className="bg-green-900 px-10 py-8 h-screen absolute w-3/6 top-20 sm:top-32  xl:w-1/6  left-0 top-24 ">
         <ul className="flex flex-col gap-8">
-          <li className="menu-list-item py-2 text-sm text-slate-100"><NavLink to="/">Inicio</NavLink></li>
-          <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Quienes somos</NavLink></li>
-          <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Productos</NavLink></li>
-          <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Contacto</NavLink></li>
+          <li className="menu-list-item py-2 text-sm text-slate-100"><a href="#prueba">Inicio</a></li>
+          <li className="menu-list-item py-2 text-slate-100"><a href="#about">Quienes somos</a></li>
+          <li className="menu-list-item py-2 text-slate-100"><a href="#products">Productos</a></li>
+          <li className="menu-list-item py-2 text-slate-100"><a href="#footer">Contacto</a></li>
           </ul>
       </div>
 

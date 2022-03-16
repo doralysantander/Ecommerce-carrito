@@ -17,7 +17,7 @@ const Category = () => {
   };*/
 
   return (
-    <div className="w-full p-8 flex h-1/5  justify-evenly">
+    <div  id ="products" className=" pt-[8rem] w-full p-8 flex h-1/5  justify-evenly">
      <img 
             src={apple}
             alt="apple"

@@ -19,7 +19,7 @@ const breakPoints = [
 const Carrusel = () => {
   const [items, setItems] = useState(images)
   return (
-    <div id="inicio"  className="App">
+    <div id="home"  className="App">
       <div className="controls-wrapper">
       </div>
       <hr className="seperator" />

@@ -8,7 +8,9 @@ import Category from '../products/Category'
 const Home = () => {
   return (
     <div>
-          
+          <div id="prueba" className="relative top-[-8rem]">
+
+          </div>
          <Carrusel/>
         <About />  
         <Category/>
