@@ -28,7 +28,7 @@ alt="logo"
 className="h-14 w-14 sm:h-20 w-20 md:h-24 w-24 lg:h-28 w-28 xl:w-28"
 />
  
-  <Cart className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14"/>
+  <Cart className=" text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14"/>
 
 
 

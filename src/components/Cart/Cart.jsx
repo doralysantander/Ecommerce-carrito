@@ -25,16 +25,16 @@ const Cart = () => {
   );
  
   return (
-    <div className="w-full h-full flex items-start justify-end ">
+    <div className=" h-full flex items-start justify-end ">
       <div
         onClick={() => setCartOpen(!cartOpen)}
-        className="absolute mt-2.5 mr-5 cursor-pointer0 z-70"
+        className="absolute  mr-0.1 cursor-pointer0 z-70" //posicion del carro
       >
         {/*circulo del carro */}
-        <div className="w-16 h-16 bg-green-900 flex items-center justify-center rounded-full">
+        <div className="w-16 h-16 bg-lime-600	 flex items-center justify-center rounded-full">
           {!cartOpen ? (
             <svg
-              className="h-8 mr-0.5 "
+              className="h-10 mr-0.5 "
               width={"45px"}
               viewBox="0 0 30 27"
               fill="none"
@@ -68,14 +68,14 @@ const Cart = () => {
               />
             </svg>
           )}
-        </div>
+        </div>{/*circulo amarillo contador */}
         {!cartOpen && (
-          <div className="w-5 h-5 rounded-full absolute top-0 right-0 bg-yellow-600 font-semibold text-xs text-slate-100 flex items-center justify-center">{productsLength}</div>
+          <div className="w-5 h-5 rounded-full absolute top-0 right-0 bg-yellow-500 font-semibold text-xs text-slate-100 flex items-center justify-center">{productsLength}</div>
         )}
       </div>
 
       {cartItems && cartOpen && (
-        <div className="absolute mt-10 mr-20 rounded-3xl bg-green-900 text-stone-100 w-56 flex flex-col justify-center items-center sm:w-96 md:w-96 lg:w-96 ">
+        <div className="absolute mt-24 mr-20 rounded-3xl bg-green-900	 text-stone-100 w-56 flex flex-col justify-center items-center sm:w-96 md:w-96 lg:w-96 ">
           <h2 className="text-center font-medium mt-34" >Tu carrito</h2>
 
           {cartItems.length === 0 ? (
@@ -87,9 +87,11 @@ const Cart = () => {
               ))}
             </div>
           )}
-          <button onClick={sendMessage}>Contactame</button>
-
+         <div className="flex flex-col gap-3"> 
           <h2 className="text-center font-medium mt-14 pb-34">Total: ${total}</h2>
+
+          <button onClick={sendMessage}>Comprar</button>
+          </div>
         </div>
       )}
     </div>
@@ -97,11 +99,25 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+
    /* <ItemCart key={i} item={item}/>
+
+    circulo del carro 
+    <div className="w-16 h-16 bg-lime-600	 flex items-center justify-center rounded-full">
    absolute top-100 
 
     className="absolute mt-0 mr-3 cursor-pointer0 z-70"
        <div className="w-screen h-12 flex justify-end">
+
+
+        <div className=" h-full flex items-start justify-end ">
+      <div
+        onClick={() => setCartOpen(!cartOpen)}
+        className="absolute mt-2.5 mr-5 cursor-pointer0 z-70"
+      >
 
 
 ____________________________________________________________
